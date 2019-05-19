@@ -1,4 +1,4 @@
-#/!bin/bash
+#!/bin/bash
 set -o nounset -o pipefail -o errexit
 
 mark() {
@@ -27,7 +27,7 @@ then
 else
     sudo apt install -y linux-image-rt-amd64
     read -p "Reboot? [y/N] "
-    if [[ "$REPLY" == "y" ]]; 
+    if [[ "$REPLY" == "y" ]];
     then
         reboot
     fi
@@ -52,7 +52,7 @@ sudo apt install -y \
     libxmu-dev libglu1-mesa-dev libgl1-mesa-dev libgtk2.0-dev \
     intltool autoconf libboost-python-dev libmodbus-dev libusb-1.0-0-dev \
     bwidget libtk-img tclx python-gtk2 python-glade2 python-gtkglext1 \
-    libgtksourceview2.0-0 python-vte python-pip
+    libgtksourceview2.0-0 python-pip
 
 # Buster's yapps2 does not install yapps anymore..
 #
